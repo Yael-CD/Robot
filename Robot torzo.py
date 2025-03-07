@@ -1,5 +1,29 @@
 from vpython import *
 titulo = canvas(title="CUBO EN 3D")
+#parte cabeza
+#cabeza                                        |
+cabeza = sphere(color=color.cyan, pos=vector(0,15,-5), radius= 2)
+#circulo blanco----------------------------------¬
+ojo1 = sphere(color=color.white, pos=vector(0.75,15,-3.5),radius= 0.6)
+ojo2 = sphere(color=color.white, pos=vector(-0.75,15,-3.5),radius= 0.6)
+#circulo negro------------------------------------¬
+ojo1p = sphere(color=color.black, pos=vector(0.78,15,-3),radius= 0.3)
+ojo2p = sphere(color=color.black, pos=vector(-0.78,15,-3),radius= 0.3)
+#cilindro rojo----------------¬
+antena1=cylinder(pos=vector(1,15,-5),axis=vector(0,0,0),radius=1,color=color.red)
+antena2=cylinder(pos=vector(-2,15,-5),axis=vector(0,0,0),radius=1,color=color.red)
+#palo azul--------------¬
+palo1=box(pos=vector(2.1,16,-5), size=vector(0.25,2,0.25), color=color.blue)
+palo2=box(pos=vector(-2.1,16,-5), size=vector(0.25,2,0.25), color=color.blue)
+#circulo rojo-------------------------------¬
+ball1=sphere(color=color.red, pos=vector(2.1,17,-5),radius=0.3)
+ball2=sphere(color=color.red, pos=vector(-2.1,17,-5),radius=0.3)
+#boca-----------------------¬
+boca=cylinder(pos=vector(0,14,-4.75),axis=vector(0,0.8,1),radius=1,color=color.black)
+#sombrero-------------------¬
+base=cylinder(pos=vector(0,16.2,-5),axis=vector(0,0.5,0),radius=1.8,color=color.red)
+copa=cylinder(pos=vector(0,16.5,-5),axis=vector(0,1.5,0),radius=1.2,color=color.red)
+
 #Crecion de un cubo
 cubo1= box(pos=vector(0,0,-10),size=vector(30,20,15),color=color.blue)#x(ancho),y(alto),z(profundidad)
 cubo1= box(pos=vector(-8,5,-2),size=vector(7,5,1),color=color.green)
