@@ -44,28 +44,28 @@ while True:
     break  
 
 #parte cabeza
-#cabeza                                        |
-cabeza = sphere(color=color.cyan, pos=vector(0,15,-5), radius= 2)
+#cabeza----------------------------------------¬
+cabeza = sphere(color=color.cyan, pos=vector(0,16,-10), radius= 7)
 #circulo blanco----------------------------------¬
-ojo1 = sphere(color=color.white, pos=vector(0.75,15,-3.5),radius= 0.6)
-ojo2 = sphere(color=color.white, pos=vector(-0.75,15,-3.5),radius= 0.6)
+ojo1 = sphere(color=color.white, pos=vector(0.75,16,-8.5),radius= 5.5)
+ojo2 = sphere(color=color.white, pos=vector(-0.75,16,-8.5),radius= 5.5)
 #circulo negro------------------------------------¬
-ojo1p = sphere(color=color.black, pos=vector(0.78,15,-3),radius= 0.3)
-ojo2p = sphere(color=color.black, pos=vector(-0.78,15,-3),radius= 0.3)
+ojo1p = sphere(color=color.black, pos=vector(2.8,15.5,-4),radius= 1.5)
+ojo2p = sphere(color=color.black, pos=vector(-2.8,15.5,-4),radius= 1.5)
 #cilindro rojo----------------¬
-antena1=cylinder(pos=vector(1,15,-5),axis=vector(0,0,0),radius=1,color=color.red)
-antena2=cylinder(pos=vector(-2,15,-5),axis=vector(0,0,0),radius=1,color=color.red)
-#palo azul--------------¬
-palo1=box(pos=vector(2.1,16,-5), size=vector(0.25,2,0.25), color=color.blue)
-palo2=box(pos=vector(-2.1,16,-5), size=vector(0.25,2,0.25), color=color.blue)
+antena1=cylinder(pos=vector(6,16,-10),axis=vector(1.5,0,0),radius=4,color=color.red)
+antena2=cylinder(pos=vector(-6,16,-10),axis=vector(-1.5,0,0),radius=4,color=color.red)
+#palo azul-------------¬
+palo1=box(pos=vector(8,19,-10), size=vector(1,10,1), color=color.blue)
+palo2=box(pos=vector(-8,19,-10), size=vector(1,10,1), color=color.blue)
 #circulo rojo-------------------------------¬
-ball1=sphere(color=color.red, pos=vector(2.1,17,-5),radius=0.3)
-ball2=sphere(color=color.red, pos=vector(-2.1,17,-5),radius=0.3)
-#boca-----------------------¬
-boca=cylinder(pos=vector(0,14,-4.75),axis=vector(0,0.8,1),radius=1,color=color.black)
+ball1=sphere(color=color.red, pos=vector(8,24,-10),radius=1.5)
+ball2=sphere(color=color.red, pos=vector(-8,24,-10),radius=1.5)
+#boca----------------------¬
+boca=cylinder(pos=vector(0,12.8,-5.5),axis=vector(0,0.5,1),radius=2,color=color.black)
 #sombrero-------------------¬
-base=cylinder(pos=vector(0,16.2,-5),axis=vector(0,0.5,0),radius=1.8,color=color.red)
-copa=cylinder(pos=vector(0,16.5,-5),axis=vector(0,1.5,0),radius=1.2,color=color.red)
+base=cylinder(pos=vector(0,22,-10),axis=vector(0,1.5,0),radius=5.5,color=color.red)
+copa=cylinder(pos=vector(0,23,-10),axis=vector(0,3.5,0),radius=4,color=color.red)
 
 #Crecion de un cubo
 cubo1= box(pos=vector(0,0,-10),size=vector(30,20,15),color=color.blue)#x(ancho),y(alto),z(profundidad)
