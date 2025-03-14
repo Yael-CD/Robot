@@ -2,46 +2,20 @@ from vpython import *
 titulo = canvas(title="CUBO EN 3D")
 import math
 
-#BRAZOS Y PIERNAS 
-cilindrop=cylinder(pos=vector(-15,5,0),axis=vector(0,0,0),radius=1,color=color.red)
-cilindro2=cylinder(pos=vector(15,5,0),axis=vector(0,0,0),radius=1,color=color.red)
-cilindro3=cylinder(pos=vector(-5,-15,0),axis=vector(0,0,0),radius=1,color=color.blue)
-cilindro4=cylinder(pos=vector(5,-15,0),axis=vector(0,0,0),radius=1,color=color.blue)
-#BOLITAS BRAZOS 
-bolita1=sphere(color=color.blue, pos=vector(-15,5,0), radius=1)
-bolita2=sphere(color=color.blue, pos=vector(15,5,0), radius=1)
+#BRAZOS Y PIERNAS
+cilindrop=cylinder(pos=vector(-16.5,5,-10),axis=vector(0,0,0),radius=1.5,color=color.red)
+cilindro2=cylinder(pos=vector(16.5,5,-10),axis=vector(0,0,0),radius=1.5,color=color.red)
+cilindro3=cylinder(pos=vector(-5,-10,-10),axis=vector(0,0,0),radius=2,color=color.blue)
+cilindro4=cylinder(pos=vector(5,-10,-10),axis=vector(0,0,0),radius=2,color=color.blue)
+#BOLITAS BRAZOS
+bolita1=sphere(color=color.blue, pos=vector(-16.5,5,-10), radius=1.5)
+bolita2=sphere(color=color.blue, pos=vector(16.5,5,-10), radius=1.5)
 
-#Valores del balanceo 
-amplitud=45 #Angulo maximo de inclinacion 
-amplitud2=-45 
-frecuencia = 0.2 #Control de la velocidad del balanceo 
-tiempo = 0
-
-#Balanceo 
-while True: 
-    rate(30)
-    #BRAZOS
-    angulo= amplitud * math.sin(frecuencia*tiempo) #Movimiento armonico 
-    cilindrop.axis=vector(0,-6,0) #Aseguramos la posicion en y 
-    cilindrop.rotate(angle=math.radians(angulo),axis=vector(2,1,1),origin=cilindrop.pos) #ROTACION SOLO EN X
-    tiempo += 0.1
-    
-    angulo= amplitud2 * math.sin(frecuencia*tiempo) #Movimiento armonico 
-    cilindro2.axis=vector(0,-6,0) #Aseguramos la posicion en y 
-    cilindro2.rotate(angle=math.radians(angulo),axis=vector(1,0,0),origin=cilindro2.pos) #ROTACION SOLO EN X
-    tiempo += 0.1
-
-    #PIERNAS
-    angulo= amplitud * math.sin(frecuencia*tiempo) #Movimiento armonico 
-    cilindro3.axis=vector(0,-6,0) #Aseguramos la posicion en y 
-    cilindro3.rotate(angle=math.radians(angulo),axis=vector(1,0,0),origin=cilindro3.pos) #ROTACION SOLO EN X
-    tiempo += 0.1
-
-    angulo= amplitud2 * math.sin(frecuencia*tiempo) #Movimiento armonico 
-    cilindro4.axis=vector(0,-6,0) #Aseguramos la posicion en y 
-    cilindro4.rotate(angle=math.radians(angulo),axis=vector(1,0,0),origin=cilindro4.pos) #ROTACION SOLO EN X
-    tiempo += 0.1
-    break  
+#Valores del balanceo
+amplitud=45 #Angulo maximo de inclinacion
+amplitud2=-45
+frecuencia = 0.2 #Control de la velocidad del balanceo
+tiempo = 0  
 
 #parte cabeza
 #cabeza----------------------------------------¬
@@ -109,3 +83,25 @@ while  True:
         incremento3.y = -incremento3.y #Ivertir direccion
     if cubo4.pos.y > limite_y or cubo4.pos.y < -limite_y:
         incremento4.y = -incremento4.y #Ivertir direccion
+    rate(60)
+    #BRAZOS
+    angulo= amplitud * math.sin(frecuencia*tiempo) #Movimiento armonico
+    cilindrop.axis=vector(0,10,0) #Aseguramos la posicion en y
+    cilindrop.rotate(angle=math.radians(angulo),axis=vector(2,1,1),origin=cilindrop.pos) #ROTACION SOLO EN X
+    tiempo += 0.1
+   
+    angulo= amplitud2 * math.sin(frecuencia*tiempo) #Movimiento armonico
+    cilindro2.axis=vector(0,-10,0) #Aseguramos la posicion en y
+    cilindro2.rotate(angle=math.radians(angulo),axis=vector(1,0,0),origin=cilindro2.pos) #ROTACION SOLO EN X
+    tiempo += 0.1
+
+    #PIERNAS
+    angulo= amplitud * math.sin(frecuencia*tiempo) #Movimiento armonico
+    cilindro3.axis=vector(0,-12,0) #Aseguramos la posicion en y
+    cilindro3.rotate(angle=math.radians(angulo),axis=vector(1,0,0),origin=cilindro3.pos) #ROTACION SOLO EN X
+    tiempo += 0.1
+
+    angulo= amplitud2 * math.sin(frecuencia*tiempo) #Movimiento armonico
+    cilindro4.axis=vector(0,-12,0) #Aseguramos la posicion en y
+    cilindro4.rotate(angle=math.radians(angulo),axis=vector(1,0,0),origin=cilindro4.pos) #ROTACION SOLO EN X
+    tiempo += 0.1
